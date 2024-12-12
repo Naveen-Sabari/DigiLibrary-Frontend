@@ -1,0 +1,70 @@
+.nga-navbar {
+  background: linear-gradient(to right, #4a90e2, #50e3c2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.nga-logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-size: 1rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f0f0f0 !important;
+}
+
+.navbar-text {
+  color: #fff;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.fas.fa-user-circle {
+  color: #fff;
+}
+/* Style for the welcome message */
+.welcome-message {
+  position: fixed;         /* Use fixed position so it stays on screen */
+  top: 20px;               /* Adjust the vertical position (space from top) */
+  right: 20px;             /* Align it to the right edge */
+  padding: 10px;
+  background-color: #28a745; /* Green for success */
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  animation: fadeIn 0.5s ease-out;
+  z-index: 1000;           /* Ensure it appears above other content */
+}
+
+/* Optional fade-in animation for the message */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .welcome-message {
+    top: 10px;            /* Slightly reduce the top space for smaller screens */
+    right: 10px;          /* Ensure it's aligned to the right on small screens */
+    font-size: 12px;      /* Adjust the font size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome-message {
+    font-size: 11px;      /* Further reduce the font size on very small screens */
+    padding: 8px;         /* Reduce padding for smaller screens */
+  }
+}

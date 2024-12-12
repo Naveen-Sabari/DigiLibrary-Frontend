@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="novel.component.css">
+</head>
+<body>
+  <app-header></app-header>
+  <main>
+    <div class="header-container">
+      <h2 class="section-title">Novels</h2>
+      <button (click)="onCheckout()" id="buto">
+        <i class="fas fa-shopping-cart"></i> 
+        Proceed to Buy
+      </button>
+    </div>
+    
+    
+
+    <section class="card-container">
+    
+      <div class="card" *ngFor="let item of items; let i = index">
+        <div class="card-image">
+          <img class="img-fluid card-img-top" id="imgg"
+               [src]="'./assets/params/images/demo/' + item.image" 
+               alt="{{ item.name }} image">
+        </div>
+        <div class="card-content">
+          <h3>{{ item.name }}</h3>
+          <p>Author: {{ item.Author }}</p>
+          <p> ₹{{ item.price }}</p>
+          <button (click)="toggleSelectProduct(i)" id="butoo">
+            {{ item.selected ? 'Deselect' : 'Select' }} to Buy
+          </button>
+        </div>
+      </div>
+    </section>
+   
+  </main>
+  <app-footer></app-footer>
+</body>
+<script src="https://js.stripe.com/v3/"></script>
+</html>

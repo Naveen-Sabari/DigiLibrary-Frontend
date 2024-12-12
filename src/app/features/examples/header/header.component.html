@@ -1,0 +1,42 @@
+<header class="navbar navbar-expand-lg navbar-dark fixed-top nga-navbar">
+  <nav class="container" aria-label="Main navigation">
+    <a class="navbar-brand">
+      <img src="../../../../assets/imgg/logo.png" width="80" height="50" alt="Digi Logo">
+      <span class="nga-logo ms-2">Digi Library</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/home">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+      </ul>
+
+      <form class="d-flex">
+        <ng-container *ngIf="isLoggedIn">
+          <span class="navbar-text me-3" (click)="showWelcomeMessage()">
+            Welcome
+            <i class="fas fa-user-circle fa-1.5x me-2"></i>&nbsp;
+          </span>
+        </ng-container>
+    
+        <div *ngIf="isClicked" class="welcome-message">
+          Welcome User!
+        </div>
+      </form>
+      
+      
+      
+    </div>
+  </nav>
+</header>

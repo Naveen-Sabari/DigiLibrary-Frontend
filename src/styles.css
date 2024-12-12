@@ -1,0 +1,11 @@
+body {
+  padding-top: 3.5rem;
+  
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --sky-blue: #5bb8e7;
+  --light-gray: #f8f9fa;
+  --dark-gray: #343a40;
+  --font-family: 'Roboto', sans-serif;
+}

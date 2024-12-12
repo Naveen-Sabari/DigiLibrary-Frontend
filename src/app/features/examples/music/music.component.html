@@ -1,0 +1,85 @@
+<app-header></app-header>
+
+
+<div class="container pt-5">
+  <div class="row mb-4">
+    <div class="text-center">
+      <h1 class="mt-5">Feel and Heal <i class="fas fa-music"></i>
+      </h1>
+      <hr>
+    </div>
+  </div>
+
+
+
+  <div class="row  justify-content-center">
+
+
+ <!-- name part -->
+
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <div class="form-group mb-4">
+        <label class="text-primary fw-bold mb-2" for="selectSongs">Choose Language 
+        </label>
+        <select class="form-control text-primary fw-bold" id="selectSongs"
+          (change)="onChangeYear($event)">
+         
+          <option value="3" selected>Tamil</option>
+          <option value="4">English</option>
+       
+        </select>
+      </div>
+      <table class="table table-hover table-striped table-bordered table-responsive-md table-sm">
+        <thead>
+          <tr>
+
+            <th class="text-secondary" style="text-align:center;">Song</th>
+
+            <th class="text-info" style="cursor: pointer;text-align:center;">Title</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let song of songs" (click)="select(song)">
+            
+            <td class="text-secondary" style="cursor: pointer;text-align:center">{{ song.top }}</td>
+
+            <td class="text-info" style="cursor: pointer;text-align:center">{{ song.title }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  <!-- video part -->
+
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <div class="text-center col mb-3">
+        <!-- <div class="card bg-light p-4 text-center" id="card"> -->
+          <div class="card-body" *ngIf="songSelected">
+
+            <h6 class="card-title text-info " id="txt">{{ songSelected.title }}</h6>
+
+          </div>
+          <div class="card-body" *ngIf="!songSelected">
+            <div class="alert alert-danger" role="alert">
+              Select a song on the list to see the clip<br>
+              <i class="fab fa-youtube fa-2x text-danger"></i>
+            </div>
+          </div>
+          <div *ngIf="songSelected" class="embed-responsive embed-responsive-16by9">
+            <iframe id="video" [src]="('https://www.youtube.com/embed/' + songSelected.link) | safe"
+              allowfullscreen>
+            </iframe>
+          </div>
+        <!-- </div> -->
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<app-footer></app-footer>

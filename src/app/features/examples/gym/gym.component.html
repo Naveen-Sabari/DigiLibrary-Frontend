@@ -1,0 +1,103 @@
+
+<app-header></app-header>
+
+<div class="gym-container">
+
+    <!-- Motivation Quote -->
+    <div class="motivational-quote">
+      <p>Pain is temporary, but the strength you gain is forever. The grind is what builds you.</p>
+    </div>
+  
+    <div class="section-title">
+      <h2>Workouts</h2>
+      <p>Discover the best workout plans tailored for your goals!</p>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4" *ngFor="let workout of workouts">
+        <div class="card" (click)="selectWorkout(workout.id)">
+          <img class="card-img-top" [src]="workout.image" alt="Workout Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ workout.title }}</h5>
+            <p class="card-text">
+                {{ workout.description }} <span class="click-here">click here..</span>
+              </p>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selected Workout Detail -->
+    <div class="detail-section" *ngIf="selectedWorkout">
+      <h3>{{ selectedWorkout.title }}</h3>
+      <p>{{ selectedWorkout.details }}</p>
+    </div>
+  
+    <div class="section-title">
+      <h2>Meal Plans</h2>
+      <p>Explore meal plans that complement your fitness journey.</p>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4" *ngFor="let mealPlan of mealPlans">
+        <div class="card" (click)="selectMealPlan(mealPlan.id)">
+          <img class="card-img-top" [src]="mealPlan.image" alt="Meal Plan Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ mealPlan.title }}</h5>
+            <p class="card-text">{{ mealPlan.description }}  <span class="click-here">click here..</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Selected Meal Plan Detail -->
+    <div class="detail-section" *ngIf="selectedMealPlan">
+      <h3>{{ selectedMealPlan.title }}</h3>
+      <p>{{ selectedMealPlan.details }} </p>
+    </div>
+  
+    <div class="section-title">
+      <h2>Expert Tips</h2>
+      <p>Get the best advice from fitness professionals.</p>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4" *ngFor="let tip of expertTips">
+        <div class="card" (click)="selectTip(tip.id)">
+          <img class="card-img-top" [src]="tip.image" alt="Expert Tip Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ tip.title }}</h5>
+            <p class="card-text">{{ tip.description }}   <span class="click-here">click here..</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Selected Expert Tip Detail -->
+    <div class="detail-section" *ngIf="selectedTip">
+      <h3>{{ selectedTip.title }}</h3>
+      <p>{{ selectedTip.details }}  </p>
+    </div>
+  
+  
+  
+  
+<!-- Famous Gym Quotes Section -->
+<div class="testimonial-section">
+    <h2>Gym Motivation</h2>
+    
+    <!-- Quote 1 -->
+    <div class="testimonial-card">
+      <p>Sometimes in a dark place, you think you've been buried, but actually, you've been planted. The strongest trees grow in the toughest soil.</p>
+    </div>
+    
+    <!-- Quote 2 -->
+    <div class="testimonial-card">
+      <p>The body achieves what the mind believes.</p>
+    </div>
+  </div>
+  
+  
+  </div>
+  <app-footer></app-footer>

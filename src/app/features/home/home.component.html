@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Web Page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="home.component.css">
+</head>
+<body>
+<app-header></app-header>
+
+  <div class="bg-smoke">
+    <div class="container py-5">
+      <!-- Title Section -->
+      <div class="row text-center mb-5">
+        <div class="col">
+          <h2 class="animate__animated animate__fadeInDown">Explore Our Features...</h2>
+          
+        </div>
+      </div>
+
+      <div class="row g-4 py-3 row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="col" *ngFor="let item of items; let i=index">
+          <div class="nga-card-step p-4 text-center">
+            <a routerLink="{{ item.link }}" class="nga-card-link">
+              <div class="icon-wrapper mb-4">
+                <i class="nga-text-primary {{ item.icon }} fa-3x"></i>
+              </div>
+              <h4 class="nga-text-primary fw-bold mb-2">{{ item.name }}</h4>
+              <p>{{ item.description }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<app-footer></app-footer>
+</body>
+</html>

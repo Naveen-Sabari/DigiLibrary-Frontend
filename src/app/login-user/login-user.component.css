@@ -1,0 +1,96 @@
+.container {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.login-container {
+  background: linear-gradient(135deg, #6e7dff, #74ebd5); 
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.login-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.login-title i {
+  margin-right: 8px;
+  font-size: 1.4rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+input.form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+  outline: none;
+}
+
+.form-text {
+  font-size: 0.85rem;
+  color: #f44e5e;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #50e3c2;
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #4fb79d;
+  transform: translateY(-2px);
+}
+
+.mt-3 {
+  text-align: center;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.mt-3 a {
+  color: #50e3c2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mt-3 a:hover {
+  text-decoration: underline;
+  color: #4fb79d;
+}

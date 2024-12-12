@@ -1,0 +1,139 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #fff; /* Solid white background */
+}
+
+/* Full-Page White Smoke Background */
+.bg-smoke {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)),
+              url('https://www.transparenttextures.com/patterns/white-smoke.png'); /* Light smoky texture */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for Page Content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title Section */
+h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Cards Section */
+.row {
+  margin-top: 20px;
+}
+
+.nga-card-step {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.nga-card-step:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  background-color: #f4f4f9;
+}
+
+.nga-card-step:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(100, 200, 250, 0.3), rgba(255, 255, 255, 0.5));
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.nga-card-step:hover:before {
+  opacity: 1;
+}
+
+.nga-card-link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  z-index: 1;
+}
+
+.icon-wrapper {
+  background-color: #e6f7ff;
+  border-radius: 50%;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nga-text-primary {
+  color: #4caf50;
+}
+
+h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.nga-card-step:hover h4 {
+  color: #333;
+}
+
+p {
+  font-size: 1rem;
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+.nga-card-step:hover p {
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  .nga-card-step {
+    padding: 20px;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nga-card-step {
+    padding: 15px;
+  }
+}

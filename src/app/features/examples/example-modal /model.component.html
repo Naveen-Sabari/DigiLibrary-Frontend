@@ -1,0 +1,8 @@
+<!-- src/app/features/examples/example-modal/modal.component.html -->
+<div  class="modal" *ngIf="newsItem">
+  <div class="modal-content">
+    <span (click)="closeModal()" class="close-btn">&times;</span>
+    <h3>{{ newsItem.description }}</h3>
+    <p>{{ newsItem.content || 'No content available for this item.' }}</p>
+  </div>
+</div>
